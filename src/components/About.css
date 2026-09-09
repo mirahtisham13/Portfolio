@@ -13,17 +13,19 @@
 }
 
 .about-quote {
-  font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
-  font-weight: 400;
-  line-height: 1.45;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.25;
   color: var(--text-primary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 .about-quote em {
   color: var(--accent-primary);
-  font-style: italic;
+  font-style: normal;
+  font-weight: 900;
 }
 
 /* ---- Two-column layout ---- */

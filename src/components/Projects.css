@@ -13,17 +13,18 @@
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  font-family: var(--font-serif);
+  font-family: 'Inter', sans-serif;
   font-size: clamp(6rem, 16vw, 14rem);
-  font-weight: 400;
-  letter-spacing: -0.04em;
+  font-weight: 900;
+  letter-spacing: -0.06em;
   color: transparent;
   -webkit-text-stroke: 1px var(--card-border);
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.5;
+  text-transform: uppercase;
 }
 
 .projects-section .container {
@@ -132,12 +133,12 @@
 }
 
 .project-title {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: var(--text-primary);
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .project-links {

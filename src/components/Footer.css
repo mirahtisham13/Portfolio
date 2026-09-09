@@ -24,12 +24,25 @@
   gap: 0.5rem;
 }
 
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .footer-logo {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
 }
 
 .footer-tagline {

@@ -6,23 +6,22 @@ import './Hero.css';
 
 const stats = [
   { value: '4+', label: 'Projects Shipped' },
-  { value: '2', label: 'Deployed Clients' },
+  { value: '2', label: 'Clients Deployed' },
   { value: '∞', label: 'Ideas in Queue' },
 ];
 
 const Hero = () => {
   const typingText = useTypewriter([
+    'Developer',
     'AI Orchestrator',
-    'Web Developer',
-    'Problem Solver',
+    'Builder',
   ]);
 
   return (
     <section id="home" className="hero-section">
 
-      {/* ── Top Row ── */}
+      {/* ── Top Row: Intro left, nothing right (stats are positioned absolute) ── */}
       <div className="hero-top-row hero-animate">
-        {/* Left: Intro */}
         <div className="hero-intro">
           <div className="hero-badge">
             <span className="hero-badge-dot" />
@@ -30,19 +29,36 @@ const Hero = () => {
           </div>
           <h2 className="hero-name">
             Hello! I'm Ahtisham Majeed Mir,<br />
-            an <span style={{ color: 'var(--accent-primary)' }}>AI Orchestrator</span>{' '}
-            &amp; Creative Developer from Kashmir.
+            an AI Orchestrator &amp; Creative<br />
+            Developer from Kashmir.
           </h2>
           <ul className="hero-role-list">
             <li>AI-Driven Development</li>
             <li>Rapid Prototyping</li>
             <li>Prompt Engineering</li>
-            <li>System Orchestration</li>
+            <li>Web Development</li>
           </ul>
         </div>
+      </div>
 
-        {/* Right: Stats */}
-        <div className="hero-stats hero-animate delay-200">
+      {/* ── Giant Title + floating person ── */}
+      <div className="hero-title-section hero-animate delay-100">
+        <h1 className="hero-giant-title">
+          {typingText}<span className="cursor">|</span>
+        </h1>
+
+        {/* Person / Avatar — full cutout style */}
+        <div className="hero-person-wrap">
+          <img
+            src="/avatar.webp"
+            alt="Ahtisham Majeed Mir"
+            className="hero-person-img"
+            loading="eager"
+          />
+        </div>
+
+        {/* Stat cards pinned right */}
+        <div className="hero-stats-sidebar hero-animate delay-200">
           {stats.map((s) => (
             <div className="hero-stat-card" key={s.label}>
               <div className="stat-value">{s.value}</div>
@@ -52,37 +68,19 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* ── Giant Title ── */}
-      <div className="hero-title-section hero-animate delay-100">
-        <h1 className="hero-giant-title">
-          <span>{typingText}</span>
-          <span className="cursor">|</span>
-        </h1>
-        {/* Floating Avatar */}
-        <div className="hero-avatar-float">
-          <img
-            src="/avatar.webp"
-            alt="Ahtisham Majeed Mir"
-            loading="eager"
-          />
-        </div>
-      </div>
-
-      {/* ── Bottom Bar ── */}
+      {/* ── Bottom Bar: centered tagline + CTA ── */}
       <div className="hero-bottom-bar hero-animate delay-300">
-        <p className="hero-description">
-          A passionate Creator &amp; AI Orchestrator specializing in rapidly building
-          exceptional digital experiences by leveraging advanced AI collaboration.
+        <p className="hero-tagline">
+          AI Orchestration, Web Development &amp; Rapid Prototyping, Made Better.
         </p>
 
         <div className="hero-cta-row">
           <a href="#projects" className="btn btn-primary">
-            View My Work <ArrowRight size={17} />
+            View Projects <ArrowRight size={16} />
           </a>
           <a href="/Resume.pdf" download className="btn btn-outline">
-            Download CV <FileText size={17} />
+            Download CV <FileText size={16} />
           </a>
-
           <div className="hero-socials">
             <a
               href="https://github.com/mirahtisham13"
@@ -91,7 +89,7 @@ const Hero = () => {
               className="social-icon"
               aria-label="GitHub"
             >
-              <GitHubIcon size={18} />
+              <GitHubIcon size={17} />
             </a>
             <a
               href="https://linkedin.com/in/mirahtisham13"
@@ -100,13 +98,13 @@ const Hero = () => {
               className="social-icon"
               aria-label="LinkedIn"
             >
-              <LinkedInIcon size={18} />
+              <LinkedInIcon size={17} />
             </a>
           </div>
         </div>
 
         <a href="#about" className="hero-scroll-hint" aria-label="Scroll down">
-          Scroll <ChevronDown size={16} />
+          Scroll <ChevronDown size={15} />
         </a>
       </div>
 

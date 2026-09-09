@@ -102,13 +102,15 @@
 }
 
 .service-row-title {
-  font-family: var(--font-serif);
+  font-family: 'Inter', sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 400;
+  font-weight: 800;
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 0.5rem;
   transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
 }
 
 .service-row-desc {
