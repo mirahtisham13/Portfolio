@@ -29,6 +29,7 @@
   color: var(--text-primary);
   text-transform: uppercase;
   padding: 0.1em 3vw;
+  padding-bottom: clamp(60px, 12vw, 140px);
   user-select: none;
   white-space: nowrap;
 }
@@ -288,6 +289,7 @@
   }
 
   .hero-title-section {
+    padding-top: 150px;
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -310,6 +312,7 @@
   .hero-giant-title {
     font-size: clamp(2rem, 11vw, 5rem);
     padding: 0 1.5rem;
+    padding-bottom: clamp(60px, 15vw, 100px);
     white-space: nowrap;
   }
 
