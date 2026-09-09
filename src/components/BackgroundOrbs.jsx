@@ -1,14 +1,7 @@
 import React from 'react';
 import './BackgroundOrbs.css';
 
-const BackgroundOrbs = () => {
-  return (
-    <div className="orbs-container">
-      <div className="orb orb-1"></div>
-      <div className="orb orb-2"></div>
-      <div className="orb orb-3"></div>
-    </div>
-  );
-};
+// Orbs removed in white theme — component is a no-op
+const BackgroundOrbs = () => null;
 
 export default BackgroundOrbs;

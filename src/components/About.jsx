@@ -1,78 +1,86 @@
 import React from 'react';
-import { Bot, Sparkles, Rocket, Cpu } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import './About.css';
-
-const services = [
-  {
-    title: 'AI-Driven Development',
-    description: 'Leveraging cutting-edge AI agents and LLMs to rapidly architect, build, and deploy full-stack applications.',
-    icon: <Bot size={32} className="service-icon" />,
-  },
-  {
-    title: 'Prompt Engineering',
-    description: 'Crafting precise, context-rich prompts to direct AI models in generating robust logic and beautiful UIs.',
-    icon: <Sparkles size={32} className="service-icon" />,
-  },
-  {
-    title: 'Rapid Prototyping',
-    description: 'Transforming ideas into functional digital products at lightning speed through AI collaboration.',
-    icon: <Rocket size={32} className="service-icon" />,
-  },
-  {
-    title: 'System Orchestration',
-    description: 'Guiding AI systems to seamlessly integrate databases, APIs, and modern frontend frameworks.',
-    icon: <Cpu size={32} className="service-icon" />,
-  },
-];
 
 const stats = [
   { value: '4+', label: 'Projects Shipped' },
-  { value: '2', label: 'Deployed Clients' },
+  { value: '2', label: 'Clients Deployed' },
   { value: '1', label: 'PWA Built' },
   { value: '∞', label: 'Ideas in Queue' },
 ];
 
 const About = () => {
   return (
-    <section id="about" className="section about-section">
+    <section id="about" className="about-section">
       <div className="container">
-        <div className="about-content">
-          <div className="about-text animate-fade-in">
-            <h2 className="heading-lg">
-              About <span className="text-gradient">Me</span>
-            </h2>
-            <p className="text-muted">
-              I am an Economics undergraduate and a forward-thinking digital creator who builds powerful applications by partnering with advanced Artificial Intelligence.
-              Instead of writing every line of code by hand, I act as an AI Orchestrator—directing intelligent agents to build complex systems, from intuitive clinic dashboards to powerful file management tools.
-            </p>
-            <p className="text-muted" style={{ marginTop: '1rem' }}>
-              I combine my analytical coursework in Economics and Data Analysis with rapid technical execution, allowing me to focus on the big picture, solve real-world problems, and deliver exceptional value to clients at unprecedented speeds.
-            </p>
 
-            {/* Stats row */}
-            <div className="about-stats">
-              {stats.map((s) => (
-                <div className="stat-item" key={s.label}>
-                  <span className="stat-value text-gradient">{s.value}</span>
-                  <span className="stat-label text-muted">{s.label}</span>
-                </div>
-              ))}
+        {/* ── Big centered quote ── */}
+        <div className="about-quote-wrap animate-fade-in">
+          <p className="about-quote">
+            I am dedicated to bringing your vision to life by crafting
+            unique, highly impactful digital experiences using{' '}
+            <em>advanced AI collaboration</em> — my work speaks louder than words.
+          </p>
+        </div>
+
+        {/* ── Two-column grid ── */}
+        <div className="about-grid">
+          {/* Left: Avatar image */}
+          <div className="about-image-wrap animate-fade-in delay-100">
+            <img
+              src="/avatar.webp"
+              alt="Ahtisham Majeed Mir"
+              className="about-image"
+              loading="lazy"
+            />
+            <div className="about-badge">
+              <span className="about-badge-number">4+</span>
+              <span className="about-badge-label">Projects Shipped</span>
             </div>
           </div>
 
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div
-                key={service.title}
-                className={`service-card glass-card animate-fade-in delay-${(index % 4 + 1) * 100}`}
-              >
-                {service.icon}
-                <h3 className="heading-md">{service.title}</h3>
-                <p className="text-muted">{service.description}</p>
-              </div>
-            ))}
+          {/* Right: Text */}
+          <div className="about-text-col animate-fade-in delay-200">
+            <div>
+              <span className="section-label">About Me</span>
+              <h2 className="heading-lg">
+                Economics Student &amp; AI Creator
+              </h2>
+            </div>
+            <p>
+              I am an Economics undergraduate and a forward-thinking digital creator
+              who builds powerful applications by partnering with advanced Artificial
+              Intelligence. Instead of writing every line of code by hand, I act as an
+              AI Orchestrator — directing intelligent agents to build complex systems,
+              from intuitive clinic dashboards to powerful file management tools.
+            </p>
+            <p>
+              I combine my analytical coursework in Economics and Data Analysis with
+              rapid technical execution, allowing me to focus on the big picture, solve
+              real-world problems, and deliver exceptional value to clients at
+              unprecedented speeds.
+            </p>
+            <div className="about-cta-row">
+              <a href="#projects" className="btn btn-primary">
+                View Projects <ArrowRight size={16} />
+              </a>
+              <a href="#contact" className="btn btn-outline">
+                Hire Me
+              </a>
+            </div>
           </div>
         </div>
+
+        {/* ── Stats row ── */}
+        <div className="about-stats-row animate-fade-in delay-300">
+          {stats.map((s) => (
+            <div className="about-stat-item" key={s.label}>
+              <span className="about-stat-value">{s.value}</span>
+              <span className="about-stat-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
