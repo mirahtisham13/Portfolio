@@ -22,7 +22,7 @@
 
 .hero-giant-title {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(5rem, 16vw, 14rem);
+  font-size: clamp(3rem, 8vw, 11rem);
   font-weight: 900;
   line-height: 0.85;
   letter-spacing: -0.04em;
@@ -265,8 +265,8 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .hero-giant-title {
-    font-size: clamp(4rem, 14vw, 9rem);
-    white-space: normal;
+    font-size: clamp(3rem, 9vw, 8rem);
+    white-space: nowrap;
     line-height: 0.9;
   }
 
@@ -308,11 +308,24 @@
   }
 
   .hero-giant-title {
-    font-size: clamp(3rem, 16vw, 6rem);
+    font-size: clamp(2rem, 11vw, 5rem);
     padding: 0 1.5rem;
+    white-space: nowrap;
   }
 
   .hero-person-wrap {
     width: clamp(140px, 50vw, 240px);
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .hero-cta-row .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
