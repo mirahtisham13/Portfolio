@@ -44,6 +44,16 @@ const projects = [
     github: 'https://github.com/mirahtisham13/Prompt-Vault',
     live: 'https://prompt-vault-sepia-two.vercel.app/',
   },
+  {
+    id: 5,
+    title: 'MyPlayer',
+    description:
+      'A beautiful, modern, high-performance Android video player based on MPV, featuring a stunning glassmorphic UI.',
+    tags: ['Android', 'Kotlin', 'MPV'],
+    image: '/myplayer.png',
+    github: 'https://github.com/mirahtisham13/MyPlayer',
+    live: '#',
+  },
 ];
 
 const Projects = () => (
