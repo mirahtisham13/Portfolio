@@ -72,9 +72,6 @@
 
 /* ── Stat cards (right side) ── */
 .hero-stats-sidebar {
-  position: absolute;
-  right: 4vw;
-  bottom: 8rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -273,11 +270,6 @@
     line-height: 0.9;
   }
 
-  .hero-stats-sidebar {
-    right: 2vw;
-    bottom: 1rem;
-  }
-
   .hero-stat-card {
     min-width: 130px;
     padding: 0.75rem 1rem;
@@ -301,16 +293,12 @@
   }
 
   .hero-stats-sidebar {
-    position: relative;
-    right: auto;
-    bottom: auto;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem 1.5rem 2rem;
+    justify-content: flex-start;
+    padding: 1rem 0;
     gap: 0.6rem;
     width: 100%;
-    z-index: 5;
   }
 
   .hero-stat-card {

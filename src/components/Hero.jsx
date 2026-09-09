@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
 
-      {/* ── Top Row: Intro left, nothing right (stats are positioned absolute) ── */}
+      {/* ── Top Row: Intro left, Stats right ── */}
       <div className="hero-top-row hero-animate">
         <div className="hero-intro">
           <div className="hero-badge">
@@ -39,6 +39,16 @@ const Hero = () => {
             <li>Web Development</li>
           </ul>
         </div>
+
+        {/* Stat cards pinned right on desktop */}
+        <div className="hero-stats-sidebar hero-animate delay-200">
+          {stats.map((s) => (
+            <div className="hero-stat-card" key={s.label}>
+              <div className="stat-value">{s.value}</div>
+              <div className="stat-label">{s.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* ── Giant Title + floating person ── */}
@@ -55,16 +65,6 @@ const Hero = () => {
             className="hero-person-img"
             loading="eager"
           />
-        </div>
-
-        {/* Stat cards pinned right */}
-        <div className="hero-stats-sidebar hero-animate delay-200">
-          {stats.map((s) => (
-            <div className="hero-stat-card" key={s.label}>
-              <div className="stat-value">{s.value}</div>
-              <div className="stat-label">{s.label}</div>
-            </div>
-          ))}
         </div>
       </div>
 
